@@ -12,6 +12,133 @@ body {
     align-items: center;
 }
 
+/* start bottomFixedImage */
+.bottomImage {
+    position: absolute;
+    bottom: 20px;
+    right: 5px;
+    width: 200px;
+    height: 110px;
+
+    >.imgFixed {
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        bottom: 30px;
+        right: 31px;
+        z-index: 1000;
+
+        >img {
+            width: 100%;
+            height: 100%;
+            border: 2px solid rgba(17, 155, 235, 0.548);
+            object-fit: cover;
+            border-radius: 50%;
+            position: relative;
+            z-index: 999;
+
+            &:hover {
+                cursor: pointer;
+                transform: perspective(200px) rotate3D(0, 1, 0, 5deg);
+            }
+        }
+
+        >div {
+            >span {
+                display: flex;
+                width: 100px;
+                height: 100px;
+                position: relative;
+                z-index: 99;
+                position: fixed;
+                bottom: 18px;
+                right: 20px;
+                filter: blur(7px);
+
+                &:nth-of-type(1) {
+                    background-image: linear-gradient(to right bottom, #7397af, #6d92af, #678eae, #6389ae, #5f84ad, #5b7da4, #58779c, #547093, #4f6681, #4b5c6e, #48525d, #44484c);
+                    border-radius: 7% 73% 26% 74% / 63% 92% 48% 57%;
+                    animation: imgButtomAnime 7s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite;
+                    box-shadow: 0 0 30px 4px rgba(0, 34, 82, 0.753);
+                }
+
+                &:nth-of-type(2) {
+                    background-image: linear-gradient(to right bottom, #7a6796, #72608c, #6a5a81, #625377, #5a4d6d, #5c4d70, #5d4e74, #5f4e77, #6a5589, #765c9b, #8263ae, #8e6ac1);
+                    border-radius: 84% 16% 85% 15% / 39% 67% 33% 61%;
+
+                    animation: imgButtomAnime2 7s ease-in-out alternate infinite;
+                }
+
+                &:nth-of-type(3) {
+                    background-image: linear-gradient(to right bottom, #4b8de7, #4883cc, #4878b1, #496d97, #4a627d, #495b70, #485563, #474e56, #444a51, #41474d, #3e4348, #3b4044);
+                    border-radius: 88% 12% 100% 0% / 46% 56% 44% 54%;
+                    animation: imgButtomAnime3 7s linear alternate infinite;
+                }
+
+                &:nth-of-type(4) {
+                    background-image: linear-gradient(to left top, #f61614, #f5332d, #f24740, #ee5752, #e86663, #e76b68, #e56f6e, #e47473, #e97170, #ed6e6d, #f26b6a, #f66867);
+                    border-radius: 52% 48% 52% 48% / 68% 67% 33% 32%;
+                    animation: imgButtomAnime4 7s linear alternate infinite;
+                }
+            }
+        }
+
+        >a {
+            width: 40px;
+            height: 40px;
+            z-index: 998;
+            position: fixed;
+            bottom: 47px;
+            right: 32px;
+            transition: all 1s ease-in-out;
+            border: 3px solid rgba(88, 163, 205, .774);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.616);
+
+
+            >i {
+                color: black;
+                font-size: 20px;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                background-color: rgba(20, 167, 252, 0.822);
+                border: 3px solid rgba(211, 206, 206, 0.548);
+                filter: hue-rotate(40%) brightness(110%) contrast(120%);
+
+                >i {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &:hover>.imgFixed>a {
+
+        &:nth-of-type(1) {
+            bottom: 10px;
+            right: 130px;
+        }
+
+        &:nth-of-type(2) {
+            bottom: 56px;
+            right: 130px;
+        }
+
+        &:nth-of-type(3) {
+
+            bottom: 103px;
+            right: 130px;
+        }
+    }
+}
+
+/* end bottomFixedImage */
+
 .pop {
     width: 900px;
     height: 600px;
@@ -141,7 +268,8 @@ body {
             letter-spacing: 0.05rem;
             color: #3e4146;
             transition: all 0.4s;
-            &:hover{
+
+            &:hover {
                 cursor: pointer;
                 color: #f66867;
             }
@@ -236,5 +364,77 @@ body {
     to {
         transform: translateX(0px);
         opacity: 1;
+    }
+}
+
+@keyframes imgButtomAnime {
+    30% {
+        border-radius: 18% 82% 24% 76% / 66% 25% 75% 34%;
+    }
+
+    60% {
+        border-radius: 182% 18% 64% 36% / 55% 77% 23% 45%;
+    }
+
+    90% {
+        border-radius: 84% 16% 85% 15% / 39% 67% 33% 61%;
+    }
+
+    100% {
+        border-radius: 11% 89% 0% 100% / 67% 32% 68% 33%;
+    }
+}
+
+@keyframes imgButtomAnime2 {
+    30% {
+        border-radius: 47% 53% 67% 33% / 4% 90% 10% 96%;
+    }
+
+    60% {
+        border-radius: 75% 25% 86% 14% / 75% 6% 94% 25%;
+    }
+
+    90% {
+        border-radius: 45% 55% 41% 59% / 75% 0% 100% 25%;
+    }
+
+    100% {
+        border-radius: 56% 44% 100% 0% / 22% 60% 40% 78%;
+    }
+}
+
+@keyframes imgButtomAnime3 {
+    30% {
+        border-radius: 0% 100% 2% 98% / 0% 100% 0% 100%;
+    }
+
+    60% {
+        border-radius: 100% 0% 100% 0% / 59% 33% 67% 41%;
+    }
+
+    90% {
+        border-radius: 0% 100% 60% 40% / 0% 33% 67% 100%;
+    }
+
+    100% {
+        border-radius: 41% 59% 17% 83% / 43% 20% 80% 57%;
+    }
+}
+
+@keyframes imgButtomAnime4 {
+    30% {
+        border-radius: 0% 100% 2% 98% / 0% 100% 0% 100%;
+    }
+
+    60% {
+        border-radius: 100% 0% 100% 0% / 52% 47% 53% 48%;
+    }
+
+    90% {
+        border-radius: 0% 100% 0% 100% / 35% 62% 38% 65%;
+    }
+
+    100% {
+        border-radius: 48% 52% 49% 51% / 49% 54% 46% 51%;
     }
 }
