@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/master.css">
+</head>
+
+<body>
+    <button class="btn">
+        <span>click me</span>
+    </button>
+    <div class="pop hide">
+        <div class="content">
+            <div class="dots">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <span>✖️</span>
+            <h2>subscribe</h2>
+            <figure>
+                <img src="assets/img/cXsiNryL.png" alt="">
+                <figcaption>Subscribe to get the latest <span style="color: #f66867;">news & updates</span>.
+                </figcaption>
+            </figure>
+            <form>
+                <input type="text" placeholder="Your email address">
+                <button>subscribe</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const pop = document.querySelector('.pop')
+        const btn = document.querySelector('.btn')
+        const close = document.querySelector('.pop>.content>span')
+        btn.addEventListener('click', () => {
+            pop.classList.remove('hide')
+        })
+        close.addEventListener('click',()=>{
+            pop.classList.add('hide')
+        })
+    </script>
+</body>
+
+</html>
