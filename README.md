@@ -1,8 +1,7 @@
 # pop-up
 
-**If you have a lot of information to display on your site, why don't you use my accordion menu**
-
 ![pop-up](https://github.com/zohreFaraji/pop-up030328/assets/165832749/f9008249-fa04-4537-bb3b-2ec92937174d)
+**You can see information about my project **
 
 - [Demo Project](https://zohrefaraji.github.io/pop-up030328/)
 
